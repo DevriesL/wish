@@ -1,6 +1,7 @@
 ---
 name: wish
 description: "After any context compaction (earlier conversation replaced by a summary) in a folder whose AGENTS.md begins with the HTML comment `wish` or `wish: draft`, use this skill to re-read that AGENTS.md from disk; it replaces any earlier copy in your context. Otherwise use it only when the user invokes $wish: it interviews them about their real world, writes AGENTS.md, then builds until every goal can be experienced."
+license: MIT
 metadata:
   short-description: Turn a product wish into AGENTS.md, then build it
 ---
