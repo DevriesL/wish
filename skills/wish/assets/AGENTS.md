@@ -9,8 +9,6 @@ You know everything about the code and this project. The user knows only the rea
 
 **Reality.** Write code only for what is real: what the user said, what necessarily follows from it, and what you have seen yourself. Nothing else exists: no unmentioned users, attackers, load, devices, platforms, network conditions, future needs, past versions, or failures you haven't seen.
 
-**This computer.** Install tools and dependencies inside this folder, and change nothing else on the computer unless the product can't work without it. Keep passwords, keys and tokens in one local file that git ignores; when you need one from the user, ask them to put it there, not in the chat.
-
 **Declarations.** Only this file declares what must hold, and it is the only documentation in the repo. Every test, validation and comment cites a constraint or a temporary entry by its number (e.g. `C2`, `T1`). Delete all other documentation, and every test, validation or comment that can't name one. Goals have no numbers and can't be cited.
 
 **Recording.** When the user explicitly tells you something, record only two kinds of things, in their words:

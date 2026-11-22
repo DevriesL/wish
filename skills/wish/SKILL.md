@@ -25,18 +25,18 @@ If the user wants to report a problem with wish itself, don't interview or build
 
 Look at what is in this folder:
 
-- AGENTS.md starts with `<!-- wish -->`: an earlier wish. Interview only about the new wish, update Goals and Constraints under its Recording rule, then build. No setup, no draft.
+- The user's home, desktop or downloads folder, or personal files unrelated to the wish: stop. Tell the user, in plain words, to make the wish in a new folder of its own.
+- AGENTS.md starts with `<!-- wish -->`: an earlier wish. Interview only about the new wish, update Goals and Constraints under its Recording rule, then build. No draft.
 - AGENTS.md starts with `<!-- wish: draft -->`: an unfinished interview. Continue it from the draft.
-- There is code: an existing project to convert. Set up, write the draft, then convert.
-- Otherwise (empty, or only things the user brought for this wish, such as data, photos or models): a new wish. Set up, write the draft, then interview.
+- There is code: an existing project to convert. Check it, write the draft, then convert.
+- Otherwise (empty, or only things the user brought for this wish, such as data, photos or models): a new wish. Write the draft, then interview.
 
-## Set up the folder
+## Checking an existing project
 
-Do this without asking and without technical words:
+An existing project may have been built without engineering habits. Before changing anything, do this without asking and without technical words:
 
-1. If this is the user's home, desktop or downloads folder, or it holds personal files unrelated to the wish, stop. Tell the user, in plain words, to make the wish in a new folder of its own.
-2. If this folder isn't the root of its own git repository, make it one. Commit what is already there before you change anything. Never add a remote or push unless the user asks.
-3. If you find passwords, keys or tokens in code or in files git would commit, move them into one local file that git ignores. If any have already left this computer (pushed or published), tell the user, in one real-world sentence, which one to change.
+1. If this folder isn't the root of its own git repository, make it one. Commit what is already there. Never add a remote or push unless the user asks.
+2. If you find passwords, keys or tokens in code or in files git would commit, move them into one local file that git ignores. If any have already left this computer (pushed or published), tell the user, in one real-world sentence, which one to change.
 
 ## Draft
 
