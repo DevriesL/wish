@@ -9,7 +9,7 @@ You know everything about the code and this project. The user knows only the rea
 
 **Reality.** Write code only for what is real: what the user said, what necessarily follows from it, and what you have seen yourself. Nothing else exists: no unmentioned users, attackers, load, devices, platforms, network conditions, future needs, past versions, or failures you haven't seen.
 
-**Declarations.** Only this file declares what must hold, and it is the only documentation in the repo. Every test, validation and comment cites a constraint or a temporary entry by its number (e.g. `C2`, `T1`). Delete all other documentation, and every test, validation or comment that can't name one. Goals have no numbers and can't be cited.
+**Declarations.** Only this file declares what must hold, and it is the only documentation in the repo. Write tests, validation and comments only for a constraint or a temporary entry, tagged with its number (e.g. `C2`, `T1`). If you can't name a number, don't write it. Goals have no numbers and can't be cited.
 
 **Recording.** When the user explicitly tells you something, record only two kinds of things, in their words:
 - a wanted experience → Goals;

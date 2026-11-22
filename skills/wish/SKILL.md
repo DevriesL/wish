@@ -15,7 +15,7 @@ The user is making a wish: they describe a product and you build it. They know o
 If the context was just compacted, read AGENTS.md from disk. It replaces any earlier copy in your context, including one loaded when this session started.
 
 - First line `<!-- wish -->`: follow it and carry on building.
-- First line `<!-- wish: draft -->`: the interview isn't finished. Pick it up from the draft; don't start over.
+- First line `<!-- wish: draft -->`: the interview or conversion isn't finished. Pick it up from the draft; don't start over.
 
 ## Reporting a problem with wish
 
@@ -27,7 +27,7 @@ Look at what is in this folder:
 
 - The user's home, desktop or downloads folder, or personal files unrelated to the wish: stop. Tell the user, in plain words, to make the wish in a new folder of its own.
 - AGENTS.md starts with `<!-- wish -->`: an earlier wish. Interview only about the new wish, update Goals and Constraints under its Recording rule, then build. No draft.
-- AGENTS.md starts with `<!-- wish: draft -->`: an unfinished interview. Continue it from the draft.
+- AGENTS.md starts with `<!-- wish: draft -->`: an unfinished interview or conversion. Continue it from the draft.
 - There is code: an existing project to convert. Check it, write the draft, then convert.
 - Otherwise (empty, or only things the user brought for this wish, such as data, photos or models): a new wish. Write the draft, then interview.
 
@@ -35,27 +35,28 @@ Look at what is in this folder:
 
 An existing project may have been built without engineering habits. Before changing anything, do this without asking and without technical words:
 
-1. If this folder isn't the root of its own git repository, make it one. Commit what is already there. Never add a remote or push unless the user asks.
-2. If you find passwords, keys or tokens in code or in files git would commit, move them into one local file that git ignores. If any have already left this computer (pushed or published), tell the user, in one real-world sentence, which one to change.
+1. If you find passwords, keys or tokens in code or in files git would commit, move them into one local file that git ignores. If any have already left this computer (pushed or published), tell the user, in one real-world sentence, which one to change.
+2. If this folder isn't the root of its own git repository, make it one. Commit anything not yet committed. Never add a remote or push unless the user asks.
 
 ## Draft
 
-Before the first question, write AGENTS.md as a draft, replacing any old one (when converting, read the old one first; the commit keeps it). It starts with these two lines:
+Before the first question, or before reading a project you convert, write AGENTS.md as a draft, replacing any old one (read the old one first; the commit keeps it). It starts with these two lines:
 
 ```
 <!-- wish: draft -->
-A wish interview is in progress here. Use the wish skill to continue it.
+A wish is in progress here. Use the wish skill to continue it.
 ```
 
-Below them keep short notes: what you have learned about the product, the candidate Goals and Constraints with where each came from, and every question asked with its answer. Update it as you go, so a compaction loses nothing.
+Below them keep short notes: whether this is a conversion, what the user said after `$wish`, what you have learned about the product, the candidate Goals and Constraints with where each came from, and every question asked with its answer. Update it as you go, so a compaction loses nothing.
 
 ## Converting a project
 
-Read before you ask, so you never ask what the files can answer.
+Keep only what would still be true if this code didn't exist. Running wish on a project is the user's confirmation: don't ask them to confirm what you keep.
 
-- Read to understand the product: what it does, for whom, and where it is used. Skim docs and tests; you don't need every line. If you can hand the reading to subagents, do, and keep only their conclusions.
-- Everything in the repo is evidence, not a constraint, whoever wrote it: the old AGENTS.md, docs, comments, tests, commit messages.
-- Open the first round by telling the user, in real-world words, what you understand the product to be and where it is used. Then ask only about what reading couldn't settle, about contradictions, and about real-world facts that some code only makes sense under (ask about the fact, not the code). Don't ask about technical rules in old docs.
+- Read to understand the product: what it does, for whom, and where it is used. Skim; you don't need every line. If you can hand the reading to subagents, do, and keep only their conclusions.
+- Goals: each experience the user has asked for, as the project's records show it, plus what they said after `$wish` (if anything). Where they differ, the user's latest words win. If neither shows what the user wants from it, ask what they use it for now.
+- Constraints: real-world facts, and the user's requirements with a clear line, that hold without this code. The user's existing data counts. When something in the repo hints at such a fact and you can't tell whether it still holds, ask about the fact, not the code, without technical words. If the answer is unclear, or is still a vague engineering wish, there is no constraint.
+- The rest of the records describe the code, whoever wrote them. While the draft is still in place, note in it that cleanup is under way, with the Goals and Constraints. Delete all documentation, tests and other agents' instruction files (but not content the product uses), and every comment that doesn't serve a constraint; tag the ones that do with its number. Only then write AGENTS.md.
 
 ## Interview
 
@@ -89,13 +90,13 @@ Compose the answers into sentences. Lift the user's words up into real-world con
 
 ## Confirm, then write
 
-Show the Goals and Constraints exactly as they will be written, in the user's language, and ask whether that is what they mean. Revise until they confirm.
+For a new wish, show the Goals and Constraints exactly as they will be written, in the user's language, and ask whether that is what they mean. Revise until they confirm.
 
-Then replace the draft with `assets/AGENTS.md` from this skill folder. Keep the Rules section word for word, replace the Goals and Constraints placeholders with the confirmed lines, and leave Temporary empty.
+Then replace the draft with `assets/AGENTS.md` from this skill folder. Keep the Rules section word for word, replace the Goals and Constraints placeholders with your lines, and leave Temporary empty.
 
 ## Then build
 
-Start building right away, in this session. Nothing said during the interview is a constraint, and neither is any AGENTS.md loaded when this session started; only the AGENTS.md you just wrote is. In a converted project, begin by making the repo obey its Declarations rule. Follow AGENTS.md until handoff.
+Start building right away, in this session. Nothing said during the interview is a constraint, and neither is any AGENTS.md loaded when this session started; only the AGENTS.md you just wrote is. Follow it until handoff.
 
 ## Examples
 
