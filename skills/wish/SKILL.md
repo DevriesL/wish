@@ -99,10 +99,15 @@ These show where the line is; they are not questions to ask.
 
 | Kind of wish | Its real world | Where the line is |
 |---|---|---|
-| App | who uses it, and where | "用 Rust 写" is a preference: ask why. |
-| Embedded device | the board in hand, its sensors, where it is installed | "用 ESP32": if that board is what the user has, it is a fact; record it. |
-| Scientific computing, simulation | the measured object, the data, the judgment the results support | "精度要高": ask what the results decide, e.g. "误差小于测量误差". |
-| 3D modeling | what the made thing is for | "要能打印": the printer model and print size are facts; ask for them. |
-| Game | who plays, on what device, how long a session lasts | "要好玩" is a fine goal; goals don't need a clear line. |
-| Web slides | the audience, the venue, the length of the talk | "像苹果发布会那样": ask which part is meant; record only that experience. |
-| Backend | who or what calls it, and how much | "要高可用": ask what happens in the real world when it is down. |
+| Office automation | the recurring chore, when it comes, what the user decides from the result | "每天早上 8 点把库存表发我邮箱" is a means even without technical words: ask why, record e.g. "开门前知道哪些货要补". |
+| Plugin inside work software | the program everyone already uses, the office computers, who shares the files | "必须做成 Excel 宏": ask why. If the office computers can't install programs, record that fact, not the macro. |
+| Shop with payments | the customers, how they find it, how money and goods change hands | "商户号还在审批" is not a constraint: build with a fake payment; it becomes a Temporary entry. |
+| Embedded, home hardware | the board in hand, its sensors, power and weather where it sits | "半夜千万别挂": ask what is lost if it stops for a night, e.g. "水泵停了鱼会死"; record that. |
+| Fabrication: 3D printing, laser cutting | the machine and material in hand, what the piece must fit | "激光机只认 DXF，3 毫米椴木切缝 0.2 毫米" sounds technical but is a fact about the machine: record it. |
+| Scientific measurement, simulation | the instrument, the data, the judgment the results support | "就是普通的表格", but the sample has gaps and mixed units: what you have seen exists. Ask whether every file looks like this. |
+| Game, learning drill | who plays, on what device, how long before attention drops | "必须让七岁的孩子自己抢着玩，别像做题" sounds strict but has no clear line: it is a goal, kept in the user's words. |
+| Web slides | the audience, the venue, the length of the talk | "这页标题换成深红" is one-off feedback: do it, don't record it. |
+| Group signup (backend) | who signs up, through which chat, how many people for how many places | "45 个家长抢 10 个名额": many tapping the last place at once necessarily follows. It is real, not imagined load. |
+| Personal archive | who opens it, on which devices, how long it must stay readable | "万一以后放网上给几万人用，还得防黑客": ask whether anyone outside the family uses it now; if not, drop it. |
+| Field data app | where it is used, who reads the data, where there is signal | "山里没信号，但办公室要实时看到" conflicts with a fact: say so in plain words and let the user choose. |
+| Existing project | who still relies on it, what goes wrong today | The old code skips orders over ¥5000: ask, in real-world terms, whether that limit still exists; record it only if it does. |
