@@ -6,10 +6,16 @@ A Codex skill for wish-driven programming: describe what you want made, answer a
 
 ## Install
 
-Copy the `wish` folder into Codex's skills folder:
+In Codex, type:
+
+```
+$skill-installer https://github.com/DevriesL/wish/tree/main/skills/wish
+```
+
+Or run in a terminal:
 
 ```sh
-cp -R wish ~/.agents/skills/
+npx skills add DevriesL/wish -g -a codex
 ```
 
 ## Use

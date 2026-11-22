@@ -6,10 +6,16 @@
 
 ## 安装
 
-把 `wish` 文件夹复制到 Codex 的 skill 目录：
+在 Codex 里输入：
+
+```
+$skill-installer https://github.com/DevriesL/wish/tree/main/skills/wish
+```
+
+或者在终端运行：
 
 ```sh
-cp -R wish ~/.agents/skills/
+npx skills add DevriesL/wish -g -a codex
 ```
 
 ## 使用
