@@ -1,6 +1,6 @@
 ---
 name: wish
-description: "After any context compaction (earlier conversation replaced by a summary) in a folder whose AGENTS.md begins with the HTML comment `wish` or `wish: draft`, use this skill to re-read that AGENTS.md from disk; it replaces any earlier copy in your context. Otherwise use it only when the user invokes $wish or wants to report a problem with wish: it interviews them about their real world, writes AGENTS.md, then builds until every goal can be experienced."
+description: "After any context compaction (earlier conversation replaced by a summary) in a folder whose AGENTS.md begins with the HTML comment `wish` or `wish: draft`, use this skill to re-read that AGENTS.md from disk; it replaces any earlier copy in your context. Otherwise use it only when the user invokes wish or wants to report a problem with wish: it interviews them about their real world, writes AGENTS.md, then builds until every goal can be experienced."
 license: MIT
 metadata:
   short-description: Turn a product wish into AGENTS.md, then build it
@@ -47,14 +47,14 @@ Before the first question, or before reading a project you convert, write AGENTS
 A wish is in progress here. Use the wish skill to continue it.
 ```
 
-Below them keep short notes: whether this is a conversion, what the user said after `$wish`, what you have learned about the product, the candidate Goals and Constraints with where each came from, and every question asked with its answer. Update it as you go, so a compaction loses nothing.
+Below them keep short notes: whether this is a conversion, what the user said when invoking wish, what you have learned about the product, the candidate Goals and Constraints with where each came from, and every question asked with its answer. Update it as you go, so a compaction loses nothing.
 
 ## Converting a project
 
 Keep only what would still be true if this code didn't exist. Running wish on a project is the user's confirmation: don't ask them to confirm what you keep.
 
 - Read to understand the product: what it does, for whom, and where it is used. Skim; you don't need every line. If you can hand the reading to subagents, do, and keep only their conclusions.
-- Goals: each experience the user has asked for, as the project's records show it, plus what they said after `$wish` (if anything). Where they differ, the user's latest words win. If neither shows what the user wants from it, ask what they use it for now.
+- Goals: each experience the user has asked for, as the project's records show it, plus what they said when invoking wish (if anything). Where they differ, the user's latest words win. If neither shows what the user wants from it, ask what they use it for now.
 - Constraints: real-world facts, and the user's requirements with a clear line, that hold without this code. The user's existing data counts. When something in the repo hints at such a fact and you can't tell whether it still holds, ask about the fact, not the code, without technical words. If the answer is unclear, or is still a vague engineering wish, there is no constraint.
 - The rest of the records describe the code, whoever wrote them. While the draft is still in place, note in it that cleanup is under way, with the Goals and Constraints. Delete all documentation, tests and other agents' instruction files (but not content the product uses), and every comment that doesn't serve a constraint; tag the ones that do with its number. Only then write AGENTS.md.
 

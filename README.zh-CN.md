@@ -2,11 +2,11 @@
 
 [English](README.md)
 
-用来做许愿式编程的 Codex skill：说出你想要的东西，回答几个关于你现实情况的问题，Codex 就会自己一直做下去，直到你能直接用上。
+用来做许愿式编程的 skill，支持 Codex 和 Antigravity：说出你想要的东西，回答几个关于你现实情况的问题，agent 就会自己一直做下去，直到你能直接用上。
 
 ## 安装
 
-在 Codex 里输入：
+**Codex**：在 Codex 里输入：
 
 ```
 $skill-installer https://github.com/DevriesL/wish/tree/main/skills/wish
@@ -18,15 +18,22 @@ $skill-installer https://github.com/DevriesL/wish/tree/main/skills/wish
 npx skills add DevriesL/wish -g -a codex
 ```
 
+**Antigravity**：在终端运行：
+
+```sh
+npx skills add DevriesL/wish -g -a antigravity
+```
+
 ## 使用
 
-在一个新建的文件夹里打开 Codex，许个愿。想改造已有的项目，就在那个项目的文件夹里许愿：
+在一个新建的文件夹里打开 Codex 或 Antigravity，许个愿。想改造已有的项目，就在那个项目的文件夹里许愿：
 
 ```
-$wish 我想做一个……
+$wish 我想做一个……    （Codex）
+/wish 我想做一个……    （Antigravity）
 ```
 
-回答它的问题，确认它记下的内容。之后它会一直做下去，做完告诉你从哪里打开。以后想加新的愿望，在同一个文件夹里再用一次 `$wish`，或者直接告诉 Codex 就行。
+回答它的问题，确认它记下的内容。之后它会一直做下去，做完告诉你从哪里打开。以后想加新的愿望，在同一个文件夹里再许一次，或者直接告诉 agent 就行。
 
 ## 反馈问题
 
@@ -40,7 +47,7 @@ $wish 我想做一个……
 
 正文：
 
-1. **许的愿**：那句 `$wish …`，以及是新文件夹、已有项目，还是后来追加的愿望。
+1. **许的愿**：调用 wish 的那句话（`$wish …` 或 `/wish …`），以及是新文件夹、已有项目，还是后来追加的愿望。
 2. **用户遇到了什么**：引用用户的原话，以及用户本来期望怎样。
 3. **哪条规则**：涉及哪条规则，属于哪种情况：没被遵守；遵守了但规则本身错了或不清楚；没有规则覆盖。
 4. **证据**：出问题的那几段对话；现在的 AGENTS.md，如果它的修改历史有关，附上 `git log -p AGENTS.md`；出问题之前有没有发生过上下文压缩。

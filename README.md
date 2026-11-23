@@ -2,11 +2,11 @@
 
 [中文](README.zh-CN.md)
 
-A Codex skill for wish-driven programming: describe what you want made, answer a few questions about your real world, and Codex builds it on its own until you can use it.
+A skill for wish-driven programming in Codex and Antigravity: describe what you want made, answer a few questions about your real world, and the agent builds it on its own until you can use it.
 
 ## Install
 
-In Codex, type:
+**Codex**: in Codex, type:
 
 ```
 $skill-installer https://github.com/DevriesL/wish/tree/main/skills/wish
@@ -18,15 +18,22 @@ Or run in a terminal:
 npx skills add DevriesL/wish -g -a codex
 ```
 
+**Antigravity**: run in a terminal:
+
+```sh
+npx skills add DevriesL/wish -g -a antigravity
+```
+
 ## Use
 
-Open Codex in a new folder and make a wish. To rework an existing project, make the wish in that project's folder:
+Open Codex or Antigravity in a new folder and make a wish. To rework an existing project, make the wish in that project's folder:
 
 ```
-$wish I want a ...
+$wish I want a ...    (Codex)
+/wish I want a ...    (Antigravity)
 ```
 
-Answer the questions and confirm what Codex writes down. It then builds without stopping and tells you where to open the result when it's done. To add a wish later, use `$wish` again in the same folder or just tell Codex.
+Answer the questions and confirm what it writes down. It then builds without stopping and tells you where to open the result when it's done. To add a wish later, make another wish in the same folder or just tell the agent.
 
 ## Report a problem
 
@@ -40,7 +47,7 @@ Title: `[<rule>] <what went wrong>`, where `<rule>` is the SKILL.md section or A
 
 Body:
 
-1. **Wish**: the `$wish …` line, and whether it was a new folder, an existing project, or a later wish.
+1. **Wish**: the line that invoked wish (`$wish …` or `/wish …`), and whether it was a new folder, an existing project, or a later wish.
 2. **What the user experienced**: in the user's words, quoted, and what they expected instead.
 3. **Which rule**: the rule involved, and which case it is: not followed; followed but wrong or unclear; or no rule covers it.
 4. **Evidence**: the conversation excerpts where it went wrong; AGENTS.md as it is now, plus `git log -p AGENTS.md` if its history matters; whether a context compaction happened before the problem.
